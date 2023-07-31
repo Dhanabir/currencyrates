@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"time"
+	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -14,6 +15,8 @@ func main() {
 
 	err = createTable(db)
 	checkError("0.1", err)
+
+	//fmt.Println("test ok")
 
 	//check historic data first: top 10 then add
 	//setHistoricRates(db)
